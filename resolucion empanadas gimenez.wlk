@@ -22,7 +22,7 @@ object baigorria {
         sueldo = (precioEmpanada * empanadasVendidas)
     }
 
-    method sueldo{
+    method sueldo(){
         return sueldo
     }
 
