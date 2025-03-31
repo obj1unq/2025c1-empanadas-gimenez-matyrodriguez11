@@ -26,14 +26,14 @@ object galvan {
     }
 
     method pagarDeudas(){
-/*        if (deuda ==> dinero){
+        if (deuda >= dinero){
             deuda = deuda - dinero
             dinero = 0
         }
         else if(deuda < dinero){ 
             deuda = 0
             dinero = dinero - deuda
-        }*/
+        }
     }
 }
 
@@ -72,6 +72,7 @@ object gimenez{
 
     method pagarSueldoA_(empleado) {
         fondoSueldos = fondoSueldos - empleado.sueldo()
+        empleado.cobrar()
     }
 
 }
