@@ -68,11 +68,15 @@ object baigorria {
 }   
 
 object gimenez{
-    var fondoSueldos = 300000
+    var fondo = 300000
 
     method pagarSueldoA_(empleado) {
-        fondoSueldos = fondoSueldos - empleado.sueldo()
+        fondo = fondo - empleado.sueldo()
         empleado.cobrar()
+    }
+
+    method fondo (){
+        return fondo
     }
 
 }
