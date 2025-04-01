@@ -23,6 +23,7 @@ object galvan {
 
     method cobrar(){
         dinero = dinero + sueldo
+        Self.pagarDeudas()
     }
 
     method pagarDeudas(){
@@ -37,23 +38,57 @@ object galvan {
     }
 }
 
+/*object galvan {
+    var sueldo = 15000
+    var saldo = 0
 
+    method sueldo(){ //getter
+        return sueldo
+    }
+    
+    method aumentarSueldo(_sueldo) { //se
+        sueldo = _sueldo
+    }
+
+    method gastar(cuanto) {
+        if (cuanto >= saldo){
+            saldo = saldo - cuanto
+        } 
+        else {
+            saldo = saldo - cuanto
+        }
+    }
+
+    method cobrar(){
+        saldo = saldo + sueldo
+    }
+
+    method deuda(){
+        return 
+    }
+}
+
+*/
 object baigorria {
     var empanadasVendidas = 0
     var sueldo = 0
     var totalCobrado = 0
-    const precioEmpanada = 15
+    var  precioEmpanada = 15
 
-    method venderEmpanadas(totalVendido) { //setter
-        empanadasVendidas = totalVendido
+    method venderEmpanadas(_empanadasVendidas) { //setter
+        empanadasVendidas = empanadasVendidas + _empanadasVendidas
         sueldo = (precioEmpanada * empanadasVendidas)
     }
 
-    method sueldo(){
+    method sueldo(){ //getter
         return sueldo
     }
 
-    method totalVendidas(){
+    method precioEmpanada(_precioEmpanada) { //setter
+        precioEmpanada = _precioEmpanada
+    }
+
+    method totalVendidas(){ //getter
         return empanadasVendidas
     }
 
@@ -80,3 +115,6 @@ object gimenez{
     }
 
 }
+
+
+//.abs() hace que te devuelva el valor siempre positivo
